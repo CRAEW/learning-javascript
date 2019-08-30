@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>JS RPG</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="module" src="js/gamelogic.js">
+
+  </script>
+</head>
+
+<body>
+
+  <div id="title">JS RPG</div>
+  <div id="start">
+    <button id="startBtn" type="button">Start Game!</button>
+  </div>
+
+  <div id="container">
+
+    <div id="p1"><!-- P1 SECTION -->
+      <div id="p1Header"><!-- P1 HEADER -->
+        <!-- NAME INPUT -->
+        <div id="p1CharName">
+          <form>
+            <input id="p1CharNameInput" type="text" name="name" placeholder="Name">
+            <input id="p1Submit" type="submit" value="Enter">
+          </form>
+        </div>
+        <!-- RACE DROPDOWN -->
+        <div id="p1Race">
+          <select id="p1RaceDropdown">
+            <option value="">--select--</option>
+            <option id="p1Human" value="human">Human</option>
+            <option id="p1Orc" value="orc">Orc</option>
+            <option id="p1Elf" value="elf">Elf</option>
+            <option id="p1Vampire" value="vampire">Vampire</option>
+          </select>
+        </div>
+        <!-- HEALTH BAR -->
+        <div id="p1HealthBar">
+          <span id="p1CurrentHealth" width="100%"></span>
+        </div>
+      </div>
+      <!-- LEFT (P1) MIDDLE SECTION -->
+      <div id="p1Middle">
+        <div id="p1Bubble">
+          <img id="p1BubbleImg" src="images/bubble1.png">
+          <!-- P1 LOG -->
+          <p id="p1Log"></p>
+        </div>
+        <!-- CHARACTER IMAGE -->
+        <div id="p1CharImg">
+          <img id="p1Img" src="">
+        </div>
+      </div><!-- P1 MIDDLE END -->
+      <div id="p1Footer"><!-- P1 FOOTER -->
+        <!-- BUTTONS for HIT, HEAL, YIELD -->
+        <div id="p1Attacks">
+          <div id="p1Hit"><button id="p1HitBtn" type="button"></button>Hit!</div>
+          <div id="p1Heal"><button id="p1HealBtn" type="button"></button>Heal</div>
+          <div id="p1Yield"><button id="p1YieldBtn" type="button"></button>Yield</div>
+        </div>
+        <!-- ITEMS DROPDOWN -->
+        <div id="p1Items"><div id="itemsTitle">Item:</div>
+          <select id="p1ItemsDropdown">
+            <option value="">--select--</option>
+            <option id="p1Boots" value="boots">Boots</option>
+            <option id="p1Staff" value="staff">Staff</option>
+            <option id="p1Sword" value="sword">Sword</option>
+            <option id="p1Bow" value="bow">Bow</option>
+          </select>
+          <img id="p1ItemImg" src="">
+        </div>
+      </div> <!-- P1 FOOTER END -->
+    </div> <!-- P1 SECTION END -->
+
+    <!-- MIDDLE -->
+    <div id="vs">VS</div>
+
+    <div id="p2"><!-- P2 SECTION START -->
+      <div id="p2Header"><!-- P2 HEADER -->
+        <!-- NAME INPUT -->
+        <div id="p2CharName">
+          <form>
+            <input id="p2CharNameInput" type="text" name="name" placeholder="Name">
+            <input id="p2Submit" type="submit" value="Enter">
+          </form>
+        </div>
+        <!-- RACE DROPDOWN -->
+        <div id="p2Race">
+          <select id="p2RaceDropdown">
+            <option value="">--select--</option>
+            <option id="p2Human" value="human">Human</option>
+            <option id="p2Orc" value="orc">Orc</option>
+            <option id="p2Elf" value="elf">Elf</option>
+            <option id="p2Vampire" value="vampire">Vampire</option>
+          </select>
+        </div>
+        <!-- HEALTH BAR -->
+        <div id="p2HealthBar">
+          <span id="p2CurrentHealth" width="100%"></span>
+        </div>
+      </div>
+      <!-- P2 MIDDLE SECTION -->
+      <div id="p2Middle">
+        <div id="p2Bubble">
+          <img id="p2BubbleImg" src="images/bubble2.png">
+          <!-- P2 LOG -->
+          <p id="p2Log"></p>
+        </div>
+        <div id="p2CharImg">
+          <img id="p2Img" src="">
+        </div>
+      </div>
+      <div id="p2Footer"><!-- P2 FOOTER -->
+        <!-- BUTTONS for HIT, HEAL, YIELD -->
+        <div id="p2Attacks">
+          <div id="p2Hit"><button id="p2HitBtn" type="button"></button>Hit!</div>
+          <div id="p2Heal"><button id="p2HealBtn" type="button"></button>Heal</div>
+          <div id="p2Yield"><button id="p2YieldBtn" type="button"></button>Yield</div>
+        </div>
+        <!-- ITEMS DROPDOWN -->
+        <div id="p2Items"><div id="itemsTitle">Item:</div>
+          <select id="p2ItemsDropdown">
+            <option value="">--select--</option>
+            <option id="p2Boots" value="boots">Boots</option>
+            <option id="p2Staff" value="staff">Staff</option>
+            <option id="p2Sword" value="sword">Sword</option>
+            <option id="p2Bow" value="bow">Bow</option>
+          </select>
+          <img id="p2ItemImg" src="">
+        </div>
+      </div><!-- P2 FOOTER END -->
+    </div><!-- P2 SECTION END -->
+  </div>
+</body>
+
+</html>

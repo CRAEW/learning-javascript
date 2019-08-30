@@ -1,0 +1,18 @@
+body {
+  font-size: 24px;
+  width: 100vw;
+}
+
+table {
+  width: 50%;
+  border: 1px solid #0e0e0e;
+  border-collapse: collapse;
+}
+table th, table td {
+  border: 1px solid #0e0e0e;
+  line-height: 2em;
+  padding-left: 30px;
+}
+table tr:nth-child(2n+2) {
+  background-color: lightgrey;
+}

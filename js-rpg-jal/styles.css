@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* hover effect for fighter images */
+img:hover {
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+/* entire screen */
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 400px;
+}
+
+/* "JS RPG" title */
+#title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: black;
+  text-shadow: 1px 1px 4px gold;
+}
+
+/* START GAME button */
+#start {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+/* P1 and P2 entire panels (basically left and right sides of screen)*/
+#p1, #p2 {
+  position: relative;
+  width: 50%;
+  z-index: 1;
+}
+
+/* VS positioning, etc */
+#vs {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  text-shadow: 2px 2px black;
+  margin-top: 13%;
+  color: gold;
+  z-index: 2;
+}
+
+/* HEADER */
+/* P1 HEADER (name, healthbar, etc) */
+#p1Header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  border-color: darkgrey;
+  border-bottom-style: dashed;
+  padding: 20px;
+  background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%);
+}
+
+/* P2 HEADER (name, healthbar, etc) */
+#p2Header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  border-color: darkgrey;
+  border-bottom-style: dashed;
+  padding: 20px;
+  background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%);
+}
+
+/* P1 & P2 HEALTH BAR */
+#p1HealthBar, #p2HealthBar {
+  background: red;
+  height: 15px;
+  width: 40%;
+  border-color: white;
+  border-style: groove;
+}
+
+/* MIDDLE */
+/* P1 & P2 MIDDLE sections (where images are displayed) */
+#p1Middle, #p2Middle {
+  height: 440px;
+  background-image: url("https://previews.123rf.com/images/robuart/robuart1807/robuart180701038/104199669-landscape-pixel-art-style-blue-sky-white-clouds-green-grass-on-ground-vector-illustration-game-inter.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FOOTER */
+/* P1 FOOTER (hit, heal, items, etc) */
+#p1Footer {
+  background-image: url("http://i.imgur.com/kpdUnNy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  height: 20%;
+}
+
+/* P2 FOOTER (hit, heal, items, etc) */
+#p2Footer {
+  background-image: url("http://i.imgur.com/kpdUnNy.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  height: 20%;
+}
+
+/* P1 & P2 sections for HIT, HEAL, YIELD */
+#p1Attacks, #p2Attacks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-color: white;
+  border-top-style: dashed;
+  padding: 15px;
+  width: 50%;
+}
+
+/* P1 ITEM dropdown */
+#p1Items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-color: white;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  padding: 15px;
+  width: 50%;
+}
+
+/* P2 ITEM dropdown */
+#p2Items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-color: white;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  border-right-style: dashed;
+  padding: 15px;
+  width: 50%;
+}
+
+/* margin for the "Items:" TEXT */
+#itemsTitle {
+  margin-right: 3px;
+}
+
+/* hover effects for 'hit', 'heal', 'yield', 'items:' TEXT */
+#p1Hit:hover, #p2Hit:hover, #p1Heal:hover, #p2Heal:hover, #p1Yield:hover, #p2Yield:hover, #itemsTitle:hover {
+  text-shadow: 1px 1px black;
+}
+
+/* BUTTONS */
+/* P1 & P2 HIT BUTTON */
+#p1HitBtn, #p2HitBtn {
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin-right: 3px;
+}
+
+/* P1 & P2 HEAL BUTTON */
+#p1HealBtn, #p2HealBtn {
+  background-color: green;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin-right: 3px;
+}
+
+/* P1 & P2 YIELD BUTTON */
+#p1YieldBtn, #p2YieldBtn {
+  background-color: grey;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin-right: 3px;
+}
+
+/* hover effect for P1 & P2 HIT BUTTON */
+#p1HitBtn:hover, #p2HitBtn:hover {
+  box-shadow: 2px 2px 5px white;
+  height: 17px;
+  width: 17px;
+  background: radial-gradient(circle, rgba(255, 129, 129, 1) 0%, rgba(255,0,0,1) 100%);
+}
+
+/* hover effect for P1 & P2 HEAL BUTTON */
+#p1HealBtn:hover, #p2HealBtn:hover {
+  box-shadow: 2px 2px 5px white;
+  height: 17px;
+  width: 17px;
+  background: radial-gradient(circle, rgb(179, 255, 126) 0%, rgba(0,255,12,1) 100%);
+}
+
+/* hover effect for P1 & P2 YIELD BUTTON */
+#p1YieldBtn:hover, #p2YieldBtn:hover {
+  box-shadow: 2px 2px 5px white;
+  height: 17px;
+  width: 17px;
+  background: radial-gradient(circle, rgb(182, 182, 181) 0%, rgba(115, 115, 115, 1) 100%);
+}

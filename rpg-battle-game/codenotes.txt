@@ -1,0 +1,51 @@
+function battle() {
+  // Check which players' turn it is and attack the other
+  if(activePlayer === 1) {
+    // Check if payer2.reflect() value is 1;
+    if(player2.reflect() === 1) {
+      player1.currenthealth - player1.totalDamage;
+    }
+
+
+
+    // player2.dodge();
+    // player1.doubleAttack();
+
+
+
+    player1.attack(player2);
+
+    console.log(`The ${player1.race} is gonna give ${player1.totalDamage} damage to ${player2.race}`);
+  } else {
+    player2.attack(player1);
+
+    console.log(`The ${player2.race} is gonna give ${player2.totalDamage} damage to ${player1.race}`);
+  };
+  // Next player's turn
+  activePlayer === 1 ? activePlayer = 2 : activePlayer = 1;
+
+  console.log(player1);
+  console.log(player2);
+  console.log('Next turn for player' + activePlayer);
+}
+
+
+
+console.log(player1.dodge());
+console.log(player2.dodge());
+console.log(player1.doubleAttack());
+console.log(player2.doubleAttack());
+
+if(player1.dodge() === 1) {
+  console.log('attack dodged')
+} else {
+  console.log('damage will follow')
+}
+
+console.log(player1.doubleAttack());
+console.log(player2.doubleAttack());
+if(player1.doubleAttack() === 1) {
+  console.log('attack twice')
+} else {
+  console.log('only one attack succeeded')
+}

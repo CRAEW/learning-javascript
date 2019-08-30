@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+
+    <div class="page">
+      <h1>Registration form</h1>
+
+      <form id="registerForm" name="registerForm" action="" method="post" accept-charset="utf-8">
+        <fieldset>
+          <legend>Register</legend>
+
+          <!-- Required fields -->
+          <div>
+            <label for="firstname">Firstname:*</label>
+            <input id="firstname" name="firstname" type="text" placeholder="Your firstname" required autofocus>
+          </div>
+
+          <div>
+            <label for="lastname">Lastname:*</label>
+            <input id="lastname" name="lastname" type="text" placeholder="Your lastname" required>
+          </div>
+
+          <div>
+            <label for="username">Username:*</label>
+            <input id="username" name="username" type="text" placeholder="Your username" required>
+          </div>
+
+          <div>
+            <label for="email">Email:*</label>
+            <input id="email" name="email" type="email" placeholder="Enter your E-mail address" pattern="^(\.?[a-z0-9-_+%]){5,}@gmail\.com$" required>
+          </div>
+
+          <div class="passwords">
+            <label for="password">Password:*</label>
+            <input id="password" name="password" type="password" placeholder="Choose your password" pattern="(?=.*\d)(?=.*[A-Z]).{2,}" required>
+          </div>
+
+          <div class="passwords">
+            <label for="passwordcheck">Confirm password:*</label>
+            <input id="passwordcheck" name="passwordcheck" type="password" placeholder="Confirm your password" pattern="(?=.*\d)(?=.*[A-Z]).{2,}" required>
+          </div>
+
+          <div>
+            <label for="address">Address:*</label>
+            <input id="address" name="address" type="text" placeholder="Enter your address" required>
+          </div>
+
+          <div>
+            <label for="city">City:*</label>
+            <input id="city" name="city" type="text" placeholder="Enter your city" required>
+          </div>
+
+          <div>
+            <label for="zip">Zip:*</label>
+            <input id="zip" name="zip" type="text" placeholder="Enter your zip-code" required>
+          </div>
+
+          <!-- Optional fields -->
+          <div>
+            <label for="phone">Phone number:</label>
+            <input id="phone" name="phone" type="text" placeholder="Enter your phone number">
+          </div>
+
+          <div>
+            <label for="age">Age:</label>
+            <input id="age" name="age" type="number" placeholder="Enter your age">
+          </div>
+
+          <div>
+            <label for="hobbies">Hobbies:</label>
+            <textarea id="hobbies" name="hobbies" rows="8" cols="80" placeholder="Enter your hobbies, seperated with a comma."></textarea>
+          </div>
+
+          <!-- Submit button -->
+          <div>
+            <label for="submit"></label>
+            <input id="submit" name="submit" type="submit" value="Register now!">
+          </div>
+        </fieldset>
+      </form> <!-- End of registration form -->
+    </div> <!-- End of page -->
+
+  </body>
+</html>

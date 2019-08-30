@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Josefin Slab", serif;
+  font-size: 16px;
+  color: #333333;
+}
+body h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 64px;
+}
+body h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+}
+body p {
+  font-size: 28.8px;
+}
+
+button {
+  font-family: "Pacifico", cursive;
+  font-size: 32px;
+  line-height: 64px;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  background-color: #F2EFEA;
+}
+body .page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+}
+body .page header {
+  width: 100%;
+}
+body .page main {
+  width: 100%;
+}
+body .page footer {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+header .header {
+  margin-left: 160px;
+}
+header .header h1 {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  color: #FC7753;
+}
+
+.border {
+  width: 30%;
+  height: 5px;
+  background-color: #FC7753;
+  margin: 0 auto;
+}
+
+button {
+  width: 240px;
+  margin-right: 368px;
+  background-color: #66D7D1;
+  border: 5px solid #e3e3e3;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #F2EFEA;
+  box-shadow: -3px 1px 10px 0 #FC7753;
+  outline: none;
+}
+button:hover {
+  background-color: #FC7753;
+  border: 5px solid #e3e3e3;
+}
+
+section {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+section .authorImage {
+  width: 300px;
+  height: 300px;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(48% at center);
+}
+section .authorImage img {
+  width: 100%;
+  height: auto;
+}
+section .textBlock {
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: center;
+  width: 700px;
+  min-height: 300px;
+  margin-left: 150px;
+  border-radius: 70px;
+  border-left: 3px solid #333333;
+  border-right: 3px solid #333333;
+  padding: 30px;
+}
+section .textBlock h2 {
+  text-align: right;
+  margin-top: 50px;
+}
+section .textBlock p {
+  text-align: justify;
+}
+
+footer {
+  align-self: flex-end;
+  background-color: #333333;
+  color: #F2EFEA;
+  text-align: center;
+}
+footer p {
+  font-size: 12.8px;
+  padding: 20px;
+}
