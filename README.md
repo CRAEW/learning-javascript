@@ -5,17 +5,17 @@
 ## Exercises
 
 1. [javascript variables, datatypes, operators](https://craew.github.io/learning-javascript/exercises/js-var-datatypes-operators/)
-    A list with most common operators and how to use them.
+    * A list with most common operators and how to use them.
 
 2. [javascript loops](https://craew.github.io/learning-javascript/exercises/js-loops/)
     * The first button generates a black&white chess-board type of pattern with numbers in it.
     * the second button does the same but uses a random color generator. Also the numbers in the fields are white or black, depending on the darkness or the random color that was generated.
     
 3. [registration form](https://craew.github.io/learning-javascript/exercises/js-registration-form/) 
-    This is a simple registration form, with javascript validation.
+    * This is a simple registration form, with javascript validation.
     
 4. [javascript objects](https://craew.github.io/learning-javascript/exercises/js-objects/)
-    This is a simple website with person-cards, created through javascript objects.
+    * This is a simple website with person-cards, created through javascript objects.
     
 ## Projects
 
