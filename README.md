@@ -1,6 +1,6 @@
 # learning-javascript
 
-[javascript functions infosheet](https://craew.github.io/learning-javascript/js-functions-infosheet/)
+1. [javascript functions infosheet](https://craew.github.io/learning-javascript/js-functions-infosheet/)
 
 ## Exercises
 
@@ -25,10 +25,10 @@
 4. [pokedex API](https://craew.github.io/learning-javascript/projects/js-pokedex-API/)
 5. [pokedex DOM](https://craew.github.io/learning-javascript/projects/js-pokedex-DOM/)
 
-**Group project**
+**Group project** <br>
 6. [RPG Battle game](https://craew.github.io/learning-javascript/projects/rpg-battle-game/)
 
 
 ## Bonus projects
 
-1. [Snakes game](https://craew.github.io/learning-javascript/BONUS-snakes/) **not started yet**
+1. [Snakes game](https://craew.github.io/learning-javascript/BONUS-snakes/) **-not started yet-**
