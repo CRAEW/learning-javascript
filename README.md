@@ -32,4 +32,4 @@
 
 ## Other Courses
 
-* [basics] (https://craew.github.io/learning-javascript/other-courses/canvas/basics/)
+* [basics](https://craew.github.io/learning-javascript/other-courses/canvas/basics/)
