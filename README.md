@@ -29,3 +29,7 @@
 ## Bonus projects
 
 * [Snakes game](https://craew.github.io/learning-javascript/BONUS-snakes/) **-not started yet-**
+
+## Other Courses
+### Canvas
+* [basics](https://craew.github.io/learning-javascript/other-courses/canvas/basics/)
