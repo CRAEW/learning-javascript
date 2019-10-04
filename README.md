@@ -33,5 +33,4 @@
 ## Other Courses
 ### Canvas
 * [basics](https://craew.github.io/learning-javascript/other-courses/canvas/basics/)
-* [gravity](https://github.com/CRAEW/learning-javascript/tree/master/other-courses/canvas/gravity/)
-      You'll need to run this on your own virtual host.
+* [gravity](https://craew.github.io/learning-javascript/other-courses/canvas/gravity/dist/)
