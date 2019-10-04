@@ -34,4 +34,4 @@
 ### Canvas
 * [basics](https://craew.github.io/learning-javascript/other-courses/canvas/basics/)
 * [gravity](https://craew.github.io/learning-javascript/other-courses/canvas/gravity/dist/)
-* [circular motion] ()
+* [circular motion](https://craew.github.io/learning-javascript/other-courses/canvas/circular-motion/dist/)
