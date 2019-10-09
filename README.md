@@ -35,4 +35,4 @@
 * [basics](https://craew.github.io/learning-javascript/other-courses/canvas/basics/)
 * [gravity](https://craew.github.io/learning-javascript/other-courses/canvas/gravity/dist/)
 * [circular motion](https://craew.github.io/learning-javascript/other-courses/canvas/circular-motion/dist/)
-* [collision2](https://craew.github.io/learning-javascript/other-courses/canvas/collision/dist/)
+* [collision2](https://craew.github.io/learning-javascript/other-courses/canvas/collision2/dist/)
