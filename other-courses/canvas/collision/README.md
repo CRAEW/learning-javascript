@@ -1,11 +1,3 @@
-# Javascript Canvas GRAVITY
-
-Tutorial on how to create gravity on the javascript canvas.
-
-<hr>
-
-# Canvas Boilerplate
-
 Canvas Boilerplate is the go-to solution for quickly creating modern canvas pieces using ES6 and webpack.
 
 ## Getting Started

@@ -96,7 +96,7 @@
 "use strict";
 
 
-var _utils = __webpack_require__(/*! ./utils.js */ "./src/js/utils.js");
+var _utils = __webpack_require__(/*! ./utils */ "./src/js/utils.js");
 
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
@@ -105,14 +105,11 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 var mouse = {
-    x: innerWidth / 2,
-    y: innerHeight / 2
+    x: 10,
+    y: 10
 };
 
 var colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66'];
-
-var gravity = 1;
-var friction = 0.99;
 
 // Event Listeners
 addEventListener('mousemove', function (event) {
@@ -128,76 +125,55 @@ addEventListener('resize', function () {
 });
 
 // Objects
-function Ball(x, y, dx, dy, radius, color) {
+function Circle(x, y, radius, color) {
     this.x = x;
     this.y = y;
-    this.dx = dx;
-    this.dy = dy;
     this.radius = radius;
     this.color = color;
+
+    this.update = function () {
+        this.draw();
+    };
 
     this.draw = function () {
         c.beginPath();
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
         c.fill();
-        c.stroke();
         c.closePath();
-    };
-
-    this.update = function () {
-        if (this.y + this.radius + this.dy > canvas.height) {
-            this.dy = -this.dy * friction;
-        } else {
-            this.dy += gravity;
-        }
-
-        if (this.x + this.radius + this.dx > canvas.width || this.x - this.radius <= 0) {
-            this.dx = -this.dx;
-        }
-
-        this.x += this.dx;
-        this.y += this.dy;
-        this.draw();
     };
 }
 
 // Implementation
-var ball = void 0;
-var ballArray = [];
+var circle1 = void 0;
+var circle2 = void 0;
+
 function init() {
-    // ball = new Ball(canvas.width/2, canvas.height/2, 2, 30, 'red');
-    // console.log(ball);
-    ballArray = [];
-
-    for (var i = 0; i < 400; i++) {
-        var radius = (0, _utils.randomIntFromRange)(8, 20);
-        var x = (0, _utils.randomIntFromRange)(radius, canvas.width - radius);
-        var y = (0, _utils.randomIntFromRange)(0, canvas.height - radius);
-        var dx = (0, _utils.randomIntFromRange)(-2, 2);
-        var dy = (0, _utils.randomIntFromRange)(-2, 2);
-        var color = (0, _utils.randomColor)(colors);
-
-        ballArray.push(new Ball(x, y, dx, dy, radius, color));
-    }
+    circle1 = new Circle(300, 300, 100, 'black');
+    circle2 = new Circle(10, 10, 30, 'tomato');
 }
 
-// Animation Loop
+// Animation Loop (drawing on the canvas)
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0, 0, canvas.width, canvas.height);
 
-    ballArray.forEach(function (item) {
-        item.update();
-    });
+    circle1.update();
+    circle2.x = mouse.x;
+    circle2.y = mouse.y;
+    circle2.update();
+
+    if ((0, _utils.distance)(circle1.x, circle1.y, circle2.x, circle2.y) < circle1.radius + circle2.radius) {
+        circle1.color = 'red';
+    } else {
+        circle1.color = 'black';
+    }
+
+    console.log((0, _utils.distance)(circle1.x, circle1.y, circle2.x, circle2.y));
 }
 
 init();
 animate();
-
-addEventListener('click', function () {
-    init();
-});
 
 /***/ }),
 
@@ -219,6 +195,7 @@ function randomColor(colors) {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
+// Computing distance between two objects
 function distance(x1, y1, x2, y2) {
   var xDist = x2 - x1;
   var yDist = y2 - y1;
