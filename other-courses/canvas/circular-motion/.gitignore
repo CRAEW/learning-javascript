@@ -1,4 +1,4 @@
 node_modules
 .ds_store
 .vscode
-./yarn.lock
+yarn.lock
