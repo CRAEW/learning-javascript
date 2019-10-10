@@ -38,4 +38,4 @@
 * [collision2](https://craew.github.io/learning-javascript/other-courses/canvas/collision2/dist/)
 
 ### React.js
-* [tic-tac-toe]()
+* tic-tac-toe
