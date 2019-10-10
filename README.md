@@ -36,3 +36,6 @@
 * [gravity](https://craew.github.io/learning-javascript/other-courses/canvas/gravity/dist/)
 * [circular motion](https://craew.github.io/learning-javascript/other-courses/canvas/circular-motion/dist/)
 * [collision2](https://craew.github.io/learning-javascript/other-courses/canvas/collision2/dist/)
+
+### React.js
+* [react.js tic-tac-toe]()
