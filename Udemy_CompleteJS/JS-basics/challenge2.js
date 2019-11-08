@@ -14,7 +14,7 @@ John and Mike both play basketball in different teams. In the latest 3 games, Jo
 
 GOOD LUCK 😀
 */
-
+/*
 var teamJohn, teamMike, averageJohn, averageMike, winnerJohn, winnerMike, draw;
 teamJohn = 89 + 120 + 103;
 // teamMike = 116 + 94 + 123;
@@ -39,3 +39,4 @@ console.log('Team John has the highest average winning score. ' + winnerJohn);
 console.log('Team Mike has the highest average winning score. ' + winnerMike);
 console.log('Team Mary has the highest average winning score. ' + winnerMary);
 console.log('It\'s a draw. ' + draw);
+*/

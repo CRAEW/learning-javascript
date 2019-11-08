@@ -115,3 +115,24 @@ console.log(x);
 x-- //x = x - 1;
 console.log(x);
 */
+
+/***********************************
+* IF / ELSE STATEMENTS
+************************************/
+/*
+var firstName = 'Wendy';
+var civilStatus = 'married';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married.');
+} else {
+    console.log(firstName + ' is single.');
+}
+
+var isMarried = false;
+if (isMarried) {
+    console.log(firstName + ' is married.');
+} else {
+    console.log(firstName + ' is single.');
+}
+*/
