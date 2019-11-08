@@ -15,28 +15,29 @@ John and Mike both play basketball in different teams. In the latest 3 games, Jo
 GOOD LUCK 😀
 */
 /*
-var teamJohn, teamMike, averageJohn, averageMike, winnerJohn, winnerMike, draw;
-teamJohn = 89 + 120 + 103;
-// teamMike = 116 + 94 + 123;
-teamMike = 89 + 120 + 103;
-averageJohn = teamJohn / 3;
-averageMike = teamMike / 3;
+var teamJohn, teamMike;
+teamJohn = (89 + 120 + 103) / 3;
+teamMike = (116 + 40 + 123) / 3;
 
 var teamMary, averageMary, winnerMary;
-teamMary = 97 + 134 + 105;
-averageMary = teamMary / 3;
+teamMary = (97 + 134 + 105) / 3;
 
-winnerJohn = averageJohn > averageMike && averageJohn > averageMary;
-winnerMike = averageMike > averageJohn && averageMike > averageMary;
-winnerMary = averageMary > averageJohn && averageMary > averageMike
-draw = averageJohn === averageMike && averageJohn === averageMary && averageMike === averageMary;
+console.log('teamJohn: ' + teamJohn);
+console.log('teamMike: ' + teamMike);
+console.log('teamMary: ' + teamMary);
 
-console.log('Team John has an average score of ' + averageJohn);
-console.log('Team Mike has an average score of ' + averageMike);
-console.log('Team Mary has an average score of ' + averageMary);
 
-console.log('Team John has the highest average winning score. ' + winnerJohn);
-console.log('Team Mike has the highest average winning score. ' + winnerMike);
-console.log('Team Mary has the highest average winning score. ' + winnerMary);
-console.log('It\'s a draw. ' + draw);
+switch(true) {
+    case teamJohn > teamMike && teamJohn > teamMary:
+        console.log('Team John wins with a score of ' + teamJohn);
+        break;
+    case teamMike > teamJohn && teamMike > teamMary:
+        console.log('Team Mike wins with a score of ' + teamMike);
+        break;
+    case teamMary > teamJohn && teamMary > teamMike:
+        console.log('Team Mary wins with a score of ' + teamMary);
+        break;
+    default:
+        console.log('It\'s a draw.');
+}
 */
