@@ -289,4 +289,34 @@ console.log(whatDoYouDo('retired', 'Mark'));
 /***********************************
 * ARRAYS
 ************************************/
+/*
+// Initialize new array
+var names = ['Wendy', 'John', 'Jane'];
+var years = new Array(1982, 1996, 1948);
 
+console.log(names);
+console.log(names.length);
+console.log(names[0]);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+var john = ['john', 'Smith', 1990, 'designer', false];
+
+john.push('blue');
+john.unshift('Mr');
+console.log(john);
+
+john.pop();
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(23));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
+console.log(isDesigner);
+*/
