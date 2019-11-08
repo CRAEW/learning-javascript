@@ -229,3 +229,64 @@ if (height == '23') {
     console.log('The == operatero does type coercion!');
 }
 */
+
+/***********************************
+* FUNCTIONS
+************************************/
+/*
+function calculateAge (birthYear) {
+    return 2019 - birthYear;
+}
+
+var ageWendy = calculateAge(1982);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageWendy, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    if (retirement > 0) {
+        console.log(firstName + ' retires in ' + retirement + ' years.');
+    } else {
+        console.log(firstName + ' is already retired.');
+    }
+   
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1968, 'Mike');
+yearsUntilRetirement(1948, 'Jane');
+*/
+
+/***********************************
+* FUNCTION EXPRESSIONS and DECLARATIONS
+************************************/
+/*
+// function declaration
+// function whatDoYouDo(job,firstName)
+
+// function expression
+var whatDoYouDo = function(job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code.';
+            // after a return no break statement is needed
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon.';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else.';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
+*/
+
+/***********************************
+* ARRAYS
+************************************/
+
