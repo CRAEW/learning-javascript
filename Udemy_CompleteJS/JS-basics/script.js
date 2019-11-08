@@ -320,3 +320,41 @@ console.log(john.indexOf(23));
 var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
 console.log(isDesigner);
 */
+
+/***********************************
+* OBJECTS and PROPERTIES
+************************************/
+/*
+// Object literal
+var wendy = {
+    firstName: 'Wendy',
+    lastName: 'Van Craen',
+    birthYear: 1982,
+    family: ['Nathan', 'Jessy', 'Bart', 'Diane', 'Guido'],
+    job: 'junior web developer',
+    isMarried: true
+};
+
+// Access object data
+console.log(wendy.firstName);
+console.log(wendy['lastName']);
+var x = 'birthYear';
+console.log(wendy[x]);
+
+// Mutate object data
+wendy.job = 'designer';
+wendy['isMarried'] = false;
+console.log(wendy);
+
+// new Object syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
+*/
+
+/***********************************
+* OBJECTS and METHODS
+************************************/
+
