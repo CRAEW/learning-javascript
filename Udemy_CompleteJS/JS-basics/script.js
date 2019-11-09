@@ -357,4 +357,23 @@ console.log(jane);
 /***********************************
 * OBJECTS and METHODS
 ************************************/
+/*
+var wendy = {
+    firstName: 'Wendy',
+    lastName: 'Van Craen',
+    birthYear: 1982,
+    family: ['Nathan', 'Jessy', 'Bart', 'Diane', 'Guido'],
+    job: 'junior web developer',
+    isMarried: true,
+    calcAge: function() {
+        this.age = 2019 - this.birthYear;
+    }
+};
+
+// console.log(wendy.calcAge());
+// var age = wendy.calcAge();
+// wendy.age = wendy.calcAge();
+wendy.calcAge();
+console.log(wendy);*/
+
 
