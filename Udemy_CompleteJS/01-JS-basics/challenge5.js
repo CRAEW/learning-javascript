@@ -33,15 +33,14 @@ Mark likes to tip
 
 GOOD LUCK 😀
 */
-
+/*
 var johnRestaurant = {
     bills: [124, 48, 268, 180, 42],
-    tips: [],
-    totalPaid: [],
     tipCalculator: function() {
-        var percentage;
+        this.tips = [];
+        this.totalPaid = [];
         for(var i = 0; i < this.bills.length; i++) {
-            
+            var percentage;
             switch(true) {
                 case this.bills[i] < 50:
                     percentage = 0.2;
@@ -55,7 +54,6 @@ var johnRestaurant = {
                 default:
                     console.log('No tip.');
             }
-
             this.tips[i] = this.bills[i] * percentage;
             this.totalPaid[i] = this.tips[i] + this.bills[i];
         }
@@ -70,12 +68,11 @@ console.log(johnRestaurant.totalPaid);
 
 var markHoliday = {
     bills: [77, 375, 110, 45],
-    tips: [],
-    totalPaid: [],
     tipCalculator: function() {
-        var percentage;
+        this.tips = [];
+        this.totalPaid = [];
         for(var i = 0; i < this.bills.length; i++) {
-            
+            var percentage;
             switch(true) {
                 case this.bills[i] < 100:
                     percentage = 0.2;
@@ -124,3 +121,4 @@ if (markHoliday.averageTips > johnRestaurant.averageTips) {
 } else {
     console.log('Mark and John paid the same amount of tips.')
 }
+*/
