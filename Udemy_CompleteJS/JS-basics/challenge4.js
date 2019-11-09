@@ -18,7 +18,8 @@ var mark = {
     mass: 87,
     height: 1.87,
     calcBMI: function() {
-        this.BMI = this.mass / (this.height^2)
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
     }
 }
 
@@ -27,13 +28,16 @@ var john = {
     mass: 87,
     height: 1.92,
     calcBMI: function() {
-        this.BMI = this.mass / (this.height^2)
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
     }
 }
 
 mark.calcBMI();
 john.calcBMI();
 console.log(mark, john);
+
+// calcBMI() also returns the BMI, so you can replace mark.BMI with mark.calcBMI() in the switch statement
 
 switch(true) {
     case mark.BMI > john.BMI:
