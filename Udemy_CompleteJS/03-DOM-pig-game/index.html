@@ -5,6 +5,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="challenges.css">
         
         <title>Pig Game</title>
     </head>
@@ -32,6 +33,18 @@
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+            <form>
+                <label for="maxScore">Winning score:
+                <input class="maxScore" type="number" value="100">
+                <div class="maxScore hidden"></div>
+                </label>
+                <input type="submit" name="SET" id="setScore" class="maxScore">
+            </form>
+
+            <div class="maxScore">
+
+            </div>
             
             <img src="dice-5.png" alt="Dice" class="dice">
         </div>

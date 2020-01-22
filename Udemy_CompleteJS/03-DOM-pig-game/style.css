@@ -103,7 +103,7 @@ body {
     font-size: 30px;
 }
 
-button {
+button, form {
     position: absolute;
     width: 200px;
     left: 50%;

@@ -1,0 +1,22 @@
+/**********************************************
+*** INPUT FIELD WINNING SCORE
+**********************************************/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+  width: 60px;
+}
+
+form {
+    text-align: center;
+    top: 85px;
+    width: auto;
+}
