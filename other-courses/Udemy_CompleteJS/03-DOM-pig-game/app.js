@@ -80,6 +80,10 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 
         // Check maxScore
         maxScore = document.getElementById('maxScore').value;
+        if(maxScore == "") {
+            document.getElementById('maxScore').value = '100';
+            maxScore = document.getElementById('maxScore').value;
+        }
         console.log(maxScore);
 
         // Check if player won the game else Next Player
@@ -129,7 +133,7 @@ function init() {
     roundScore = 0;
     gamePlaying = true;
     rolledDice = [];
-    // document.getElementById('maxScore').value = 100;
+    document.getElementById('maxScore').value = "";
 
     document.querySelector('.dice').style.display = 'none';
 
