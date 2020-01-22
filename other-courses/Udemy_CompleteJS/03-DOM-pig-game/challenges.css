@@ -1,0 +1,37 @@
+/**********************************************
+*** INPUT FIELD
+**********************************************/
+
+form {
+    position: absolute;
+    top: 545px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #EB4D4D;
+    text-align: center;
+    height: 35px;
+    border: 1px solid grey;
+    background-color: white;
+}

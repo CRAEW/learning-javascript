@@ -9,9 +9,17 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying, rolledDice, maxScore;
+var scores, roundScore, activePlayer, gamePlaying, rolledDice;
+
+var maxScore;
 
 init();
+
+// Prevent form from submitting on ENTER
+const form = document.getElementById('form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+});
 
 /******************************
  * ROLL DICE BUTTON
@@ -70,8 +78,13 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         // Update the UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
+        // Check maxScore
+        maxScore = document.getElementById('maxScore').value;
+        console.log(maxScore);
+
         // Check if player won the game else Next Player
         if (scores[activePlayer] >= maxScore) {
+
             document.getElementById('name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
@@ -116,6 +129,7 @@ function init() {
     roundScore = 0;
     gamePlaying = true;
     rolledDice = [];
+    // document.getElementById('maxScore').value = 100;
 
     document.querySelector('.dice').style.display = 'none';
 
