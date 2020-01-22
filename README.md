@@ -37,5 +37,5 @@
 * [circular motion](https://craew.github.io/learning-javascript/other-courses/canvas/circular-motion/dist/)
 * [collision2](https://craew.github.io/learning-javascript/other-courses/canvas/collision2/dist/)
 
-### React.js
-* tic-tac-toe
+### Udemy_CompleteJS
+* [DOM pig game](https://craew.github.io/learning-javascript/other-courses/Udemy_CompleteJS/03-DOM-pig-game/)
