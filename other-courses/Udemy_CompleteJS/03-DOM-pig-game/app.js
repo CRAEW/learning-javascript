@@ -27,15 +27,19 @@ form.addEventListener('submit', function(event) {
 document.querySelector('.btn-roll').addEventListener('click', function () {
     if (gamePlaying) {
         // Create random number
-        var dice = Math.floor((Math.random() * 6) + 1);
+        var dice1 = Math.floor((Math.random() * 6) + 1);
+        var dice2 = Math.floor((Math.random() * 6) + 1);
 
         // Display the dice result
-        var diceDOM = document.querySelector('.dice');
-        diceDOM.style.display = 'block';
-        diceDOM.src = 'dice-' + dice + '.png';
+        var dice1DOM = document.querySelector('.dice1');
+        var dice2DOM = document.querySelector('.dice2');
+        dice1DOM.style.display = 'inline-block';
+        dice2DOM.style.display = 'inline-block';
+        dice1DOM.src = 'dice-' + dice1 + '.png';
+        dice2DOM.src = 'dice-' + dice2 + '.png';
 
         // save rolled number in array
-        rolledDice.push(dice);
+        rolledDice.push(dice1 + dice2);
 
         // select last 2 rolled numbers from array
         var current = rolledDice.length - 1;
@@ -51,10 +55,10 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             // Next player
             nextPlayer();
 
-        } else if (dice !== 1) {
+        } else if (dice1 !== 1 || dice2 !== 1) {
             // Update the round score IF the rolled number was NOT a 1
             // Add score
-            roundScore += dice;
+            roundScore += dice1 + dice2;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else {
             // Next Player
@@ -80,19 +84,19 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         // Check winningScore
         input = document.getElementById('maxScore').value;
 
-        if(maxScore) {
+        if(input) {
             winningScore = input;
         } else {
             winningScore = 100;
-        //     document.getElementById('maxScore').value = '100';
-        //     maxScore = document.getElementById('maxScore').value;
+            document.getElementById('maxScore').value = '100';
         }
 
         // Check if player won the game else Next Player
         if (scores[activePlayer] >= winningScore) {
 
             document.getElementById('name-' + activePlayer).textContent = 'Winner!';
-            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.dice1').style.display = 'none';
+            document.querySelector('.dice2').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
@@ -122,7 +126,8 @@ function nextPlayer() {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 
-    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice1').style.display = 'none';
+    document.querySelector('.dice2').style.display = 'none';
 
 };
 
@@ -137,7 +142,8 @@ function init() {
     rolledDice = [];
     document.getElementById('maxScore').value = "";
 
-    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice1').style.display = 'none';
+    document.querySelector('.dice2').style.display = 'none';
 
     /******************************
      * Set displayed scores to 0 in the DOM
