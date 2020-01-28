@@ -11,7 +11,7 @@ GAME RULES:
 
 var scores, roundScore, activePlayer, gamePlaying, rolledDice;
 
-var maxScore;
+var maxScore, winningScore;
 
 init();
 
@@ -36,7 +36,6 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
         // save rolled number in array
         rolledDice.push(dice);
-        console.log(rolledDice);
 
         // select last 2 rolled numbers from array
         var current = rolledDice.length - 1;
@@ -78,16 +77,19 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         // Update the UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-        // Check maxScore
-        maxScore = document.getElementById('maxScore').value;
-        if(maxScore == "") {
-            document.getElementById('maxScore').value = '100';
-            maxScore = document.getElementById('maxScore').value;
+        // Check winningScore
+        input = document.getElementById('maxScore').value;
+
+        if(maxScore) {
+            winningScore = input;
+        } else {
+            winningScore = 100;
+        //     document.getElementById('maxScore').value = '100';
+        //     maxScore = document.getElementById('maxScore').value;
         }
-        console.log(maxScore);
 
         // Check if player won the game else Next Player
-        if (scores[activePlayer] >= maxScore) {
+        if (scores[activePlayer] >= winningScore) {
 
             document.getElementById('name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
@@ -153,8 +155,6 @@ function init() {
     document.querySelector('.player-0-panel').classList.add('active');
 
 };
-
-
 
 
 /*
