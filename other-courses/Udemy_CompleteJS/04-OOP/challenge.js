@@ -8,13 +8,41 @@
 a) question itself
 b) the answers from which the player can choose the correct one (choose an adequate data structure here, array, object, etc.)
 c) correct answer (I would use a number for this)
+*/
 
-2. Create a couple of questions using the constructor
+var questions = [];
 
-3. Store them all inside an array
+function Question(question, answers, correct) {
+    this.question = question;
+    this.answers = answers;
+    this.correct = correct;
+}
 
-4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
+// 2. Create a couple of questions using the constructor
+var q1 = new Question("What species is Jabba from Star Wars?",["Ithorian", "Jenet","Jawa", "Hutt"],3);
+var q2 = new Question("What\'s the name of the spaceship that can destroy a whole planet?", ["Planet destroyer", "Death Star", "Stargun"], 1);
+var q3 = new Question("What\'s the name of the big villain in Star Wars?",["Sint", "Vader", "Sith Lord", "Darth Lord"], 2);
+var q4 = new Question("Which robot is not a character in Star Wars?",["Wal-E","C-3PO", "R2-D2", "BB-8"],0);
+var q5 = new Question("What\'s the name of Han Solo\'s ship?",["Tardis","Millenium Falcon", "Serenity", "Rocinante"], 1);
 
+// 3. Store them all inside an array
+questions.push(q1, q2, q3, q4, q5);
+
+// 4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
+function randomQuestion () {
+    var randomQ = Math.floor(Math.random() * 5);
+
+    console.log(questions[randomQ].question);
+
+    for (var i = 0; i < questions[randomQ].answers.length; i++) {
+        console.log(i + ": " + questions[randomQ].answers[i]);   
+    }
+}
+
+randomQuestion();
+
+
+/*
 5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
 
 6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
