@@ -39,4 +39,4 @@
 
 ### Udemy_CompleteJS
 * [DOM pig game](https://craew.github.io/learning-javascript/other-courses/Udemy_CompleteJS/03-DOM-pig-game/)
-* [OOP Console Quiz] (https://craew.github.io/learning-javascript/other-courses/Udemy_CompleteJS/04-OOP/) (you need to open the browser console to see this one)
+* [OOP Console Quiz](https://craew.github.io/learning-javascript/other-courses/Udemy_CompleteJS/04-OOP/) (you need to open the browser console to see this one)
