@@ -26,12 +26,24 @@ c) correct answer (I would use a number for this)
         }
     };
 
-    Question.prototype.checkAnswer = function (answer) {
+    Question.prototype.checkAnswer = function (answer, callback) {
+        var sc;
+
         if (answer === this.correct) {
             console.log("Correct answer!");
+            sc = callback(true);
         } else {
             console.log("That is not the right answer.");
-        };
+
+            sc = callback(false);
+        }
+
+        this.displayScore(sc);
+    }
+
+    Question.prototype.displayScore = function (score){
+        console.log("Your current score is: " + score);
+        console.log('--------------------------------------');
     }
 
     // 2. Create a couple of questions using the constructor
@@ -44,22 +56,40 @@ c) correct answer (I would use a number for this)
     // 3. Store them all inside an array
     var questions = [q1, q2, q3, q4, q5];
 
+    function score() {
+        var score = 0;
+        return function(correct) {
+            if (correct) {
+                score++;
+            }
+            return score;
+        }
+    }
+
+    var keepScore = score();
+
     // 4. Select one random question and log it on the console, together with the possible answers (each question should have a number) (Hint: write a method for the Question objects for this task).
-    var randomQ = Math.floor(Math.random() * questions.length);
 
-    questions[randomQ].display();
+    var gamePlay = 1;
 
-    //5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
-    var answer = parseInt(prompt("Please enter the number of the correct answer."));
+    while (gamePlay !== 0) {
+        var randomQ = Math.floor(Math.random() * questions.length);
+        questions[randomQ].display();
 
-    // 6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
-    questions[randomQ].checkAnswer(answer);
+        //5. Use the 'prompt' function to ask the user for the correct answer. The user should input the number of the correct answer such as you displayed it on Task 4.
+        var answer = prompt("Please enter the number of the correct answer. Type exit to stop the game.");
 
+        if (String(answer) === "exit") {
+            gamePlay = 0;
+            console.log("You have stopped the game. Refresh your page to restart.")
+        } else {
+            // 6. Check if the answer is correct and print to the console whether the answer is correct ot nor (Hint: write another method for this).
+            questions[randomQ].checkAnswer(parseInt(answer), keepScore);
+        };
+    };
 })();
 
 // 7. Suppose this code would be a plugin for other programmers to use in their code. So make sure that all your code is private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
-
-
 
 /*
 --- Expert level ---
