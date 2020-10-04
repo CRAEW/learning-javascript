@@ -5,7 +5,7 @@ TODO LIST
 - Get input values
 - Add the new item to our data structure
 - Add the new item to the UI
-- Calculatie budget
+- Calculate budget
 - Update the UI
 
 -----------
@@ -18,7 +18,7 @@ UI-MODULE
 
 DATA MODULE
 - Add the new item to our data structure
-- Calculatie budget
+- Calculate budget
 
 CONTROLLER MODULE
 - Add event handler
