@@ -41,14 +41,26 @@ var UIController = (function() {
 
 
 // GLOBAL APP CONTROLLER
-var controller = (function(budgetCtrl, UICtrl) {
+var controller = (function(budgetCtrl,UICtrl) {
 
-    var DOM = UICtrl.getDOMstrings();
+    // Sets up ALL Event Listeners
+    var setupEventListeners = function() {
+        var DOM = UICtrl.getDOMstrings();
 
+        document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
+
+        document.addEventListener('keypress', function(event) {
+            if (event.keyCode === 13 || event.which === 13) {
+                ctrlAddItem();
+            }
+        });
+    };
+
+
+    // Adds new item
     var ctrlAddItem = function() {
         // Get the input data
         var input = UICtrl.getinput();
-        console.log(input);
 
         // Add the item to budget controller
 
@@ -58,19 +70,20 @@ var controller = (function(budgetCtrl, UICtrl) {
 
         // Display budget on UI
 
-    }
+    };
 
-    document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
 
-    document.addEventListener('keypress', function(event) {
-
-        if (event.keyCode === 13 || event.which === 13) {
-            ctrlAddItem();
+    return {
+        init: function() {
+            console.log('Application has started.');
+            setupEventListeners();
         }
-
-    });
+    }
 
 
 })(budgetController, UIController);
+
+// Without this line of code, nothing will work.
+controller.init();
 
 
