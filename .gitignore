@@ -1,1 +1,10 @@
 other-courses/canvas/circular-motion/.gitignore
+.idea/
+node_modules
+.ds_store
+.vscode
+yarn.lock
+node-modules/
+other-courses/Udemy_CompleteJS_2.0/node_modules/
+other-courses/Udemy_CompleteJS/.idea/
+other-courses/canvas/circular-motion/.vscode/
