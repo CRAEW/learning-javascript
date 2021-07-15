@@ -5,6 +5,5 @@ node_modules
 .vscode
 yarn.lock
 node-modules/
-other-courses/Udemy_CompleteJS_2.0/node_modules/
 other-courses/Udemy_CompleteJS/.idea/
 other-courses/canvas/circular-motion/.vscode/
