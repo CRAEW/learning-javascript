@@ -111,5 +111,4 @@
 //   top: s1coords.top + window.pageYOffset,
 //   behavior: 'smooth',
 // });
-
 // });
