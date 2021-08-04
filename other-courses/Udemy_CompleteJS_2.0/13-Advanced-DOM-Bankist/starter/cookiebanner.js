@@ -1,3 +1,5 @@
+'use strict';
+
 // Cookiebanner
 
 const header = document.querySelector('.header');
