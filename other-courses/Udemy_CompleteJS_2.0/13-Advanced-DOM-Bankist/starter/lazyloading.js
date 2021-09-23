@@ -7,6 +7,7 @@ const revealSection = function (entries, observer) {
   const [entry] = entries;
   //   console.log(entry);
 
+  // Guard clause
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove('section--hidden');
@@ -30,6 +31,7 @@ const loadImg = function (entries, oberser) {
   const [entry] = entries;
   //   console.log(entry);
 
+    // Guard clause
   if (!entry.isIntersecting) return;
 
   // Replace src with data-src

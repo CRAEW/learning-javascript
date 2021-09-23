@@ -14,6 +14,6 @@ const handleHover = function (e) {
   }
 };
 
-// Passing "argumant" into handler
+// Passing "argument" into handler
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));

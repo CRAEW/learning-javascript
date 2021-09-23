@@ -1,6 +1,6 @@
 'use strict';
 
-//  Sticky navigation
+//  Sticky navigation version 1
 // const initialCoords = section1.getBoundingClientRect();
 // console.log(initialCoords);
 
