@@ -1,6 +1,5 @@
 'use strict';
-
-// // constructor function
+// constructor function
 // const Person = function (firstName, birthYear) {
 //   // Instance properties
 //   this.firstName = firstName;
@@ -24,6 +23,12 @@
 // console.log(mathilda, jack);
 
 // console.log(jonas instanceof Person);
+
+// Person.hey = function () {
+//   console.log('Hey there 👋');
+// };
+
+// Person.hey();
 
 // // Prototypes
 // console.log(Person.prototype);
@@ -63,3 +68,37 @@
 
 // const h1 = document.querySelector('h1');
 // console.dir(x => x + 1);
+
+// Class expression
+// const PersonCl = class {}
+
+// // Class declaration
+// class PersonCl {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+
+//   // Prototypal inheritance
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   }
+
+//   greet() {
+//     console.log(`Hey ${this.firstName}`);
+//   }
+// }
+
+// const jessica = new PersonCl('Jessica', 1996);
+// console.log(jessica);
+// jessica.calcAge();
+
+// PersonCl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName}`);
+// };
+
+// jessica.greet();
+
+// 1. Classes are NOT hoisted
+// 2. Classes are first-class citizens
+// 3. Classes are executed in strict mode
