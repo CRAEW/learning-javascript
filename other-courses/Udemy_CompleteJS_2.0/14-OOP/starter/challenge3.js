@@ -51,9 +51,9 @@ EV.prototype.accelerate = function () {
   );
 };
 
-const tesla = new EV('Tesla', 120, 23);
+// const tesla = new EV('Tesla', 120, 23);
 
-tesla.chargeBattery(90);
-console.log(tesla);
-tesla.brake();
-tesla.accelerate();
+// tesla.chargeBattery(90);
+// console.log(tesla);
+// tesla.brake();
+// tesla.accelerate();

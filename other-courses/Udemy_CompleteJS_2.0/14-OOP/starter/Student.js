@@ -1,16 +1,16 @@
-const Student = function (firstName, birthYear, course) {
-  Person.call(this, firstName, birthYear);
-  this.course = course;
-};
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear);
+//   this.course = course;
+// };
 
-// Linking prototypes
-Student.prototype = Object.create(Person.prototype);
+// // Linking prototypes
+// Student.prototype = Object.create(Person.prototype);
 
-Student.prototype.introduce = function () {
-  console.log(`My name is ${this.firstName} and I study ${this.course}`);
-};
+// Student.prototype.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// };
 
-const mike = new Student('Mike', 2020, 'Computer Science');
+// const mike = new Student('Mike', 2020, 'Computer Science');
 
 // mike.introduce();
 // mike.calcAge();
@@ -24,3 +24,31 @@ const mike = new Student('Mike', 2020, 'Computer Science');
 
 // Student.prototype.constructor = Student;
 // console.dir(Student.prototype.constructor);
+
+// ES6 Classes
+// class StudentCl extends PersonCl {
+//   constructor(fullName, birthYear, course) {
+//     // Always needs to happen first!
+//     super(fullName, birthYear);
+//     this.course = course;
+//   }
+
+//   introduce() {
+//     console.log(`My name is ${this.fullName} and I study ${this.course}`);
+//   }
+
+//   calcAge() {
+//     console.log(
+//       `I'm ${
+//         2037 - this.birthYear
+//       } years old, but as a student I feel more like ${
+//         2037 - this.birthYear + 10
+//       }`
+//     );
+//   }
+// }
+
+// const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
+// console.log(martha);
+// martha.introduce();
+// martha.calcAge();
